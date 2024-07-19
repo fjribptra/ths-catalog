@@ -42,7 +42,7 @@ export default async function DashBoardPage({ session, user, getUserProductsById
         <h1 className="font-bold text-xl">Your Comments (3)</h1>
         <div className="grid grid-cols-1 gap-5">
           <div className="flex flex-col gap-5">
-            //! coments
+            {/* comments */}
           </div>
         </div>
       </div>
