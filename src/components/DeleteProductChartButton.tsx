@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 export default function DeleteProductChartButton({userProduct, user}: {userProduct: UserProduct, user: any}) {
     const router = useRouter()
     async function deleteProduct(id: number, userId: number) {
-        const response = await fetch(`http://localhost:3000/api/cart/${userId}/${id}`, {
+        const response = await fetch(`/api/cart/${userId}/${id}`, {
             method: 'DELETE',
         })
         const data = await response.json();

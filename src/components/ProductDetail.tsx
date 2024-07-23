@@ -19,7 +19,7 @@ export default function ProductDetail({ params, user, userProducts }: { params: 
   }
 
   async function checkIsProductExist(userId: number, productId: string) {
-    const res = await fetch(`http://localhost:3000/api/cart/${userId}/${productId}`);
+    const res = await fetch(`/api/cart/${userId}/${productId}`);
     const data = await res.json();
     // const data = {userId, productId}
     return data;
@@ -32,7 +32,7 @@ export default function ProductDetail({ params, user, userProducts }: { params: 
   }, [params.id, user?.id, userProducts]);
 
   async function addProductToCart() {
-    const response = await fetch("http://localhost:3000/api/cart", {
+    const response = await fetch("/api/cart", {
       method: "POST",
       body: JSON.stringify({
         productId: productById.id,
