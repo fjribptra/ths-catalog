@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 300;
+
 const prisma = new PrismaClient();
 export async function POST(request: NextRequest) {
   const { commentMessage, productIdFromFakeStore, userId } = await request.json();

@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 300;
+
 export async function GET(request: NextRequest, { params }: { params: { userId: string } }) {
   const { userId } = params;
   const parsedUserId = parseInt(userId)

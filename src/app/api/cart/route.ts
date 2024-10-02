@@ -2,6 +2,8 @@ import { PrismaClient } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 300;
+
 export async function POST(request: NextRequest) {
     const {productId, productName, productCategory, productImage, productPrice} = await request.json()
     // console.log({productId, productName, productCategory, productImage, productPrice})

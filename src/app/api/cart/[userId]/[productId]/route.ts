@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 
+export const maxDuration = 300;
+
 export async function DELETE(request: NextRequest, { params }: { params: { userId: string; productId: string } }) {
     const { userId, productId } = params;
     const prisma = new PrismaClient();
